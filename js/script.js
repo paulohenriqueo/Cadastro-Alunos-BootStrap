@@ -52,6 +52,25 @@ function formatPhone(phone) {
     }
 }
 
+//save student
+function save() {
+
+    var student = {
+        id: students.length + 1,
+        name: document.getElementById("inputName").value,
+        email: document.getElementById("inputEmail").value,
+        phone: document.getElementById("phone").value,
+        course: parseInt(document.getElementById("selectCourse").value),
+        shift: document.querySelector('input[name="shift"]:checked').value,
+    };
+
+    addNewRow(student);
+    students.push(student);
+
+    document.getElementById("formStudent").reset();
+
+}
+
 //add new row
 function addNewRow(student){
 
