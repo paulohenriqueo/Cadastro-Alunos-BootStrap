@@ -36,7 +36,7 @@
                             </div>
                             <label for="inputPhone" class="col-sm-2 col-form-label">Telefone:</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control" id="inputPhone">
+                                <input type="text" class="form-control" id="phone">
                             </div>
                         </div>
                         <div class="row mb-3">
@@ -55,23 +55,23 @@
                             <label for="inputShift" class="col-sm-2 col-form-label">Turno:</label>
                             <div class="col">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="shift" id="exampleRadios1"
-                                        value="option1" checked>
-                                    <label class="form-check-label" for="exampleRadios1">
+                                    <input class="form-check-input" type="radio" name="shift" id="morningShift"
+                                        value="" checked>
+                                    <label class="form-check-label" for="morningShift">
                                         Manhã
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="shift" id="exampleRadios2"
-                                        value="option2">
-                                    <label class="form-check-label" for="exampleRadios2">
+                                    <input class="form-check-input" type="radio" name="shift" id="eveningShift"
+                                        value="">
+                                    <label class="form-check-label" for="eveningShift">
                                         Tarde
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="shift" id="exampleRadios3"
-                                        value="option3">
-                                    <label class="form-check-label" for="exampleRadios3">
+                                    <input class="form-check-input" type="radio" name="shift" id="nightShift"
+                                        value="">
+                                    <label class="form-check-label" for="nightShift">
                                         Noite
                                     </label>
                                 </div>
@@ -95,7 +95,7 @@
 
             <div class="row">
                 <div class="col-md-10 offset-md-1">
-                    <table class="table">
+                    <table class="table" id="studentsTable">
                         <thead>
                             <tr>
                                 <th scope="col">#</th>
@@ -107,22 +107,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Pedro Antônio</td>
-                                <td>pedro.antonio@abutua.com</td>
-                                <td>(15) 9999-9999</td>
-                                <td>Angular</td>
-                                <td>Tarde</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Glauco</td>
-                                <td>teste@teste.com</td>
-                                <td>(11) 1111-11</td>
-                                <td>Java</td>
-                                <td>Manhã</td>
-                            </tr>
+                            
                         </tbody>
                     </table>
                 </div>
@@ -139,6 +124,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/jquery.mask.min.js"></script>
+    <script src="/js/script.js"></script>
+
 </body>
 
 </html>
