@@ -88,12 +88,18 @@ function addNewRow(student){
 
     //insert student email
     var emailNode = document.createTextNode(student.email);
-    newRow.insertCell().appendChild(emailNode);
+    
+    var cell = newRow.insertCell();
+    cell.className = "d-none d-md-table-cell";
+    cell.appendChild(emailNode);
 
     //insert student phone
     var formattedPhone = formatPhone(student.phone);
     var phoneNode = document.createTextNode(formattedPhone);
-    newRow.insertCell().appendChild(phoneNode);
+    
+    var cell = newRow.insertCell();
+    cell.className = "d-none d-md-table-cell";
+    cell.appendChild(phoneNode);
 
     //insert student course
     var course = courses.find(c => c.id === student.course);
