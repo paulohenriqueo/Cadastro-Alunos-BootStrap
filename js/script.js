@@ -102,21 +102,17 @@ function addNewRow(student){
     cell.appendChild(phoneNode);
 
     //insert student course
+
     var course = courses.find(c => c.id === student.course);
-    newRow.insertCell().appendChild(document.createTextNode(course ? course.name : "Desconhecido"));
+    var courseName = course ? course.name : "Desconhecido";
+    var courseCell = newRow.insertCell();
+    courseCell.className = "d-none d-md-table-cell";
+    courseCell.appendChild(document.createTextNode(courseName));
 
     //insert student shift
-    var shift = '';
-    if(student.shift === 'Manhã') {
-        shift = 'manhã';
-    }
-    if(student.shift === 'Tarde') {
-        shift = 'tarde';
-    }
-    if(student.shift === 'Noite') {
-        shift = 'noite';
-    }
 
-    newRow.insertCell().appendChild(document.createTextNode(student.shift));
+    var shiftCell = newRow.insertCell();
+    shiftCell.className = "d-none d-md-table-cell";
+    shiftCell.appendChild(document.createTextNode(student.shift));
 
 }
